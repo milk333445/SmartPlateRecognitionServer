@@ -1,0 +1,14 @@
+model_converter:
+  model_path: "./lpr_weight/bbox_best_416.pt"
+  image_path: "tmp.jpg"
+  onnx_output_path: "bbox_best_416_bt1.onnx"
+  trt_output_path: "bbox_best_416_bt1.engine"
+  work_space: 6 # GB
+  image_size:
+    - 224
+    - 224
+  batch_size: 1
+  dynamic: False 
+  simplify: False
+  half: False
+  opset_version: 12

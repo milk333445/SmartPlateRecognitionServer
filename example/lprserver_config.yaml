@@ -1,0 +1,37 @@
+LPR_UDPServer:
+  host: "10.0.0.77"
+  port: 8000
+  buffer_timeout: 0.5
+  recv_buffer_size: 1048576 # udp buffer size
+  send_buffer_size: 1048576
+  perspect_transform: False # align the license plate
+  continuous_learning:
+    reload_port: 8001 # udp server for lpr
+    commands_port: 8002 # combine with reload_port
+    enable: True
+    conf_threshold: 0.7 # use for data collection
+    save_path: './continuous_learning_dataset'
+    train_file_path: '/usr/src/app/yolov5' # absolute path
+    train_data_path: '/usr/src/app/yolov5/data' # absolute path
+    train_script_path: '/usr/src/app/yolov5/train.py' # absolute path
+    images_threshold: 100
+    check_interval_hours: 2 
+    cooldown_period_hours: 12 
+    training_windows:
+      - start: "02:00"
+        end: "04:00"
+      - start: "05:00"
+        end: "07:00"  
+    train_ratio: 0.95 # train/test ratio
+    train_model_configs_path: '/usr/src/app/lpr_server_v0.1/train_configs/yolov5n.yaml'
+    train_data_configs_path: '/usr/src/app/lpr_server_v0.1/train_configs/coco.yaml'
+    pretrain_model_weights_path: '/usr/src/app/lpr_server_v0.1/lpr_engine/lpr_weight/char_best_224.pt'
+    train_hyp_configs_path: '/usr/src/app/lpr_server_v0.1/train_configs/hyp.scratch-low.yaml'
+    train_epochs: 1
+    train_batch_size: 8
+    train_img_size: 224
+    freeze_layers: 10
+    tmp_train_model_weights_path: '/usr/src/app/lpr_server_v0.1/tmp_train_model_weights'
+    test_model_results_path: './test_results'
+    test_dataset_path: './test_dataset/labeled_images' # provided by user
+    tmp_detection_config_path: './train_configs/detection.yaml'

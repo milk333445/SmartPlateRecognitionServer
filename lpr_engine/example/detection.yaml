@@ -1,0 +1,15 @@
+car_plate:
+    weight: './lpr_engine/lpr_weight/bbox_best_224.pt'
+    size: 224
+    conf_threshold: 0.25
+    iou_threshold: 0.45
+    fp16: False
+    classes: 
+
+car_char:
+    weight: './lpr_engine/lpr_weight/char_best_224.pt'
+    size: 224
+    conf_threshold: 0.6
+    iou_threshold: 0.45
+    fp16: False
+    classes: 

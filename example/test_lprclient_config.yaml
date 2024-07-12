@@ -1,0 +1,8 @@
+TEST_LPR_UDPClient:
+  host: "10.0.0.77"
+  port: 8000
+  draw: True
+  timeout: 10
+  send_mode: 'path' # image or path
+  send_interval: 0
+  save_path: './test_results'
