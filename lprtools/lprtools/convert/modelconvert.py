@@ -6,7 +6,8 @@ import sys
 import yaml
 import time
 
-from lprtools.detect import load_model
+from ..detect import load_model
+# from lprtools.detect import load_model
 
 
 def torch2trt(model_path, output_path, input_shape=(1, 3, 640, 640), fp16_mode=False):

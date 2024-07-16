@@ -1,4 +1,5 @@
-from lprtools.convert import ModelConverter
+# from lprtools.convert import ModelConverter
+from lprtools.lprtools.convert import ModelConverter
 
 
 if __name__ == '__main__':

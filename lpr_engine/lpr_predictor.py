@@ -5,8 +5,7 @@ import numpy as np
 import argparse
 import time
 import copy
-from lprtools.detect import DetectorBuilder
-from lprtools.vision import draw_bbox, draw_text
+from lprtools.lprtools.detect import DetectorBuilder
 
         
 class LPRDetector:

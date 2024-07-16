@@ -107,7 +107,7 @@ model_converter:
 ### Convert Model
 - To convert a model to both ONNX and TensorRT formats, use the following code:
 ```python=
-from nexva.convert import ModelConverter
+from lprtools.lprtools.convert import ModelConverter
 config_path = 'configs/convert.yaml'
 model_converter = ModelConverter(config_path)
 # to onnx and tensorrt at the same time
